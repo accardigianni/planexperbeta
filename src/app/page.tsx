@@ -3,16 +3,15 @@ import React from 'react';
 import Navbar from './component/navbar/Navbar';
 import { ReturnButton } from './component/button/ReturnButton';
 import { ContinueButton } from './component/button/ContinueButton';
+import { Box } from './component/board/BoardTemplate';
 
 export default function Home() {
   return (
     <>
-        <Navbar />
-        <br />
-        <br />
-        <br/>
-        <ReturnButton />
-        <ContinueButton />
+        {/* <Navbar /> */}
+        {/* <ReturnButton />
+        <ContinueButton /> */}
+        <Box/>
         </>
   );
 }
