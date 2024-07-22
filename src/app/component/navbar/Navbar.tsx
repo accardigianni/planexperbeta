@@ -18,7 +18,7 @@ function Navbar() {
   return (
     <>
       <AppBar sx={{ width: '100%' }} >
-        <Toolbar sx={{ justifyContent: 'space-between',backgroundColor: '#324d62' }}>
+        <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Button sx={{ color: 'white' }}>PLANEXPER</Button>
           <Box sx={{ display: 'flex', gap: '15px' }}>
             <HomeIcon  />

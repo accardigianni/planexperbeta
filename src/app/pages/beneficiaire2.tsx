@@ -5,6 +5,7 @@ import HeadBand from '../component/headBandProjectCréer/headBand';
 import { ReturnButton } from '../component/button/ReturnButton';
 import { ContinueButton } from '../component/button/ContinueButton';
 import BoardBeneficiaryInfo from '../component/board/BoardTemplate';
+import CommercialText from '../component/CommercialText/commercialTextfiel';
 import './styleBeneficiaire2.css'
 
 export default function Beneficiaire2() {
@@ -19,7 +20,7 @@ export default function Beneficiaire2() {
         </div>
         <div className="commercialAndButton">
           <div className='commercial'>
-            Commercial
+           <CommercialText/>  
           </div>
           <div className='button'>
             <ReturnButton />

@@ -9,11 +9,12 @@ export const ReturnButton : React.FC = () =>{
         <Button 
         variant="contained" 
         sx={{
-            backgroundColor : '#f6c042', 
             width: '150px', 
             height:'50px',  
             textTransform: 'none', 
-            fontSize:'11px'
+            fontFamily: 'Inter, sans-serif',
+            fontSize: '13px',
+            fontWeight: 600,
             }}  
         startIcon={<ReplayIcon/>}>
         Retour

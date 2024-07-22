@@ -25,17 +25,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: rgb(127, 127, 127);
-    box-shadow: 0px 2px 2px -1px rgba(0, 0, 0, 0.2);
+
   }
 
 .commercial{
     display: flex;
     align-items: center; 
-    padding-left: 15%;
-    font-family: "Noto Sans";
-    font-size: 24px;
-    font-weight: 600;
     width: 60%;
     height: 100%;
 }

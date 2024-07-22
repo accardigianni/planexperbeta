@@ -9,12 +9,13 @@ export const ContinueButton : React.FC = () =>{
         <>
         <Button 
         variant="contained" 
-        sx={{
-            backgroundColor : '#f6c042', 
+        sx={{ 
             width: '150px', 
             height:'50px',  
             textTransform: 'none', 
-            fontSize:'11px'
+            fontFamily: 'Inter, sans-serif',
+            fontSize: '13px',
+            fontWeight: 600,
             }} 
         startIcon={<ArrowCircleRightIcon />}>
         Continuer
