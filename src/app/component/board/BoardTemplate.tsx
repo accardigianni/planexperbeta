@@ -1,10 +1,14 @@
 import React from "react";
-import "./style.css";
+import "./styleBoard.css";
 
-export const Box = (): JSX.Element => {
-  return (
-    <div className="box">
-      <div className="content-BG" />
-    </div>
-  );
-};
+
+export default function BoardBeneficiaryInfo() {
+
+return(
+  <>
+  <div className="board">
+    les infos du beneficiaire
+  </div>
+  </>
+
+)}
