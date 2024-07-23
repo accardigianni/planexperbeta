@@ -1,11 +1,11 @@
 // pages/index.tsx
 import React from 'react';
-import Beneficiaire2 from './pages/beneficiaire2';
+import Beneficiaire from './pages/beneficiaire';
 
 export default function Home() {
   return (
     <div>
-    <Beneficiaire2 />
+    <Beneficiaire />
     </div>
   );
 }

@@ -11,6 +11,7 @@ const theme = createTheme({
     }
   },
   components:{
+    // custom button
     MuiButton:{
       styleOverrides:{
         contained:{
@@ -22,6 +23,7 @@ const theme = createTheme({
         },
       },
     },
+    // custom app bar
     MuiAppBar:{
       styleOverrides:{
         root: {
@@ -29,10 +31,32 @@ const theme = createTheme({
           color:'white'
         },
       }
+    },
+    // custom textfield form
+    MuiTextField:{
+      styleOverrides:{
+        root:{
+          backgroundColor: '#eeeeee',
+
+          '& .MuiInputBase-input':{ // cibler l'input du TextField
+            fontWeight: 'bold', 
+            fontSize: '15px', 
+            lineHeight: '16px', 
+            fontFamily: 'Inter, sans-serif', 
+            color: '#000000e5', 
+          },
+          // '& .MuiInputLabel-root': { // cibler le label du TextField ???
+          //   fontFamily: 'Roboto, sans-serif', // personnaliser la police du label
+          //   fontWeight:'bold',
+          //   fontSize: '11px',
+          //   lineHeight: '16px',
+          //   color: '#000000e5',
+          // },
+      
+        }
+      }, 
     }
-  },
-    
-  
+  }
 });
 
 export default theme;
