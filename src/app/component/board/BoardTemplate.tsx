@@ -1,41 +1,57 @@
-import React from "react";
-import { Grid, TextField } from "@mui/material";
-import { Box } from '@mui/material';
-import ModeEditOutlineIcon from '@mui/icons-material/ModeEditOutline';
+import React from 'react';
+import { Box, Grid } from '@mui/material';
+import MapHeadBand from './mapHeadBand/mapHeadBand';
+
 
 export default function BoardBeneficiaryInfo() {
   return (
     <>
-      <Box
-        sx={{
-          height: "90%",
-          width: "90%",
-          display: "flex",
-          justifyContent:"center",
-          backgroundColor: 'white'}}>
-        {/* je declare deux lignes */}
-        <Grid container direction="row" >
-          <Grid xs={12} >
-            <span style={{justifyContent:"center"}}> Les informations au dessus de la carte</span>
-          </Grid>
-          <Grid xs={12} sx={{ border: '1px solid black' }}>
-            {/* dans ma 2eme ligne je declare des colonnes qui feront toute la longueur de mes lignes */}
-            <Grid container xs={12} direction='column' sx={{ border: '1px solid red ' }}>
-                <Grid sx={{  border: '1px solid yellow'}}>
-                  <span>une ecriture</span>
-                </Grid>
-                <Grid sx={{ }}>
-                  <span>une ecriture</span>
-                </Grid>
-                
-            </Grid>
-          </Grid>
-        </Grid>
-      </Box>
+    <Box
+      sx={{
+        height: "90%",
+        width: "90%",
+        display: "flex",
+        justifyContent: "center",
+        backgroundColor: 'white'
+      }}>
+        <Grid container direction="row" spacing={2} 
+        sx={{ 
+        justifyContent: "flex-end",
+        pr: 10 ,
+        mt:2, 
+        fontFamily:'Roboto',
+        fontSize: '20px',
+        fontWeight: '600', }}>
+      <MapHeadBand/>
+      </Grid>
+      
+    </Box>
     </>
   );
 }
 
+
+
+
+
+//  {/* je declare deux lignes */}
+//  <Grid container direction="row" >
+//  <Grid xs={12} >
+//    <span style={{justifyContent:"center"}}> Les informations au dessus de la carte</span>
+//  </Grid>
+//  <Grid xs={12} sx={{ border: '1px solid black' }}>
+//    {/* dans ma 2eme ligne je declare des colonnes qui feront toute la longueur de mes lignes */}
+//    <Grid container xs={12} direction='column' sx={{ border: '1px solid red ' }}>
+//        <Grid sx={{  border: '1px solid yellow'}}>
+//          <span>une ecriture</span>
+//        </Grid>
+//        <Grid sx={{ }}>
+//          <span>une ecriture</span>
+//        </Grid>
+       
+//    </Grid>
+//  </Grid>
+// </Grid>
 
 
 
