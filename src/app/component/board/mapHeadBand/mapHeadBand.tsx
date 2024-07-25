@@ -8,13 +8,25 @@ export default function MapHeadBand() {
       sx={{
         justifyContent: 'flex-end',
         flexDirection: 'row',
-        gap: '10px',
+        gap: 5,
         color:"#666666",
-        p : 2
+        fontSize: '16px', 
+        fontWeight:600,
+        fontFamily: 'Arial, sans-serif',
+        p : 3,
+        '& .MuiGrid-item': {
+          // Appliquer un padding horizontal pour agrandir les cellules
+          paddingLeft: '20px', 
+          paddingRight: '20px',
+          // Appliquer un padding vertical pour ajuster la hauteur
+          paddingTop: '10px', 
+          paddingBottom: '10px'
+        }
       }}>
       <Grid item  
         sx={{
-           color: "black"
+           color: "black",
+           borderBottom: '3px solid black'
         }}>
         <div> PARTICULIER BENEFICIAIRE </div>
       </Grid>
@@ -30,3 +42,4 @@ export default function MapHeadBand() {
     </Grid>
   );
 }  
+// regarder les element tabs et tab pour faire cette section
