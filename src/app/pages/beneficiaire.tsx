@@ -6,31 +6,27 @@ import { ReturnButton } from '../component/button/ReturnButton';
 import { ContinueButton } from '../component/button/ContinueButton';
 import BoardBeneficiaryInfo from '../component/board/BoardTemplate';
 import CommercialText from '../component/CommercialText/commercialTextfiel';
-import './styleBeneficiaire2.css'
+import { Box, Container, Grid } from '@mui/material';
 
 export default function Beneficiaire() {
     return (
-      <div>
-      <div className='parent'>
-        <div className="navbar">
-          <Navbar /> 
-        </div>
-        <div className="headbandCreateProject">
-          <HeadBand/>
-        </div>
-        <div className="commercialAndButton">
-          <div className='commercial'>
-           <CommercialText/>  
-          </div>
-          <div className='button'>
-            <ReturnButton />
-            <ContinueButton />
-          </div>
-        </div>
-      <div className="cardInfo">
-        <BoardBeneficiaryInfo />
-      </div>
-      </div>
-          </div>
+      
+        <Box sx={{height:'100%', width:'100%',border:'2px solid red', backgroundColor: '#ebebeb'}}>
+          <Grid container sx={{flexDirection:'column'}} >
+            <Grid item xs={12}>
+              <Navbar/>
+            </Grid>
+            <Grid item sx={{ boxShadow: '0px 4px 12px rgba(0, 0, 0, 0.1)', p:2,   }}>
+              <HeadBand/>
+            </Grid>
+            <Grid item  sx={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
+              <CommercialText/>
+            </Grid>
+            
+            <Grid item sx={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
+              <BoardBeneficiaryInfo/>
+            </Grid>
+          </Grid>
+        </Box>
     );
   }

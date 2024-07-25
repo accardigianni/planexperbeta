@@ -17,7 +17,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 function Navbar() {
   return (
     <>
-      <AppBar sx={{ width: '100%' }} >
+      <AppBar sx={{ width: '100%',  position: 'relative' }} >
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <Button sx={{ color: 'white' }}>PLANEXPER</Button>
           <Box sx={{ display: 'flex', gap: '15px' }}>
