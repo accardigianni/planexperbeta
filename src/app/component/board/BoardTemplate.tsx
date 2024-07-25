@@ -1,6 +1,7 @@
 import React from 'react';
-import { Box, Grid } from '@mui/material';
+import { Box, Grid, TextField } from '@mui/material';
 import MapHeadBand from './mapHeadBand/mapHeadBand';
+import ModeEditOutlineIcon from '@mui/icons-material/ModeEditOutline';
 
 
 export default function BoardBeneficiaryInfo() {
@@ -8,145 +9,115 @@ export default function BoardBeneficiaryInfo() {
     <>
     <Box
       sx={{
-        height: "90%",
+        borderRadius:1,
+        height:'90%',
         width: "90%",
         display: "flex",
-        justifyContent: "center",
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        flexDirection: 'column',
       }}>
-        <Grid container direction="row" spacing={2} 
-        sx={{ 
-        justifyContent: "flex-end",
-        pr: 10 ,
-        mt:2, 
-        fontFamily:'Roboto',
-        fontSize: '20px',
-        fontWeight: '600', }}>
-      <MapHeadBand/>
-      </Grid>
-      
-    </Box>
-    </>
-  );
-}
+        <MapHeadBand />
+      <Grid container sx={{ flexDirection: 'row',p:3, height: '100%', width:'100%'}}> 
+
+        <Grid container xs={6} sx={{flexDirection: 'column', border: '2px solid blue' }}>
+          <Grid container sx={{flexDirection:'row'}}>
+            <Grid item sx={{
+              display: 'flex',           
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontFamily:'Noto Sans',
+              fontSize: '26px',
+              fontWeight: '600',
+              height: 'auto'}}>
+              <div>PARTICULIER BENEFICIAIRE</div>
+              <ModeEditOutlineIcon style={{
+                border: '1px solid',
+                borderRadius: '5px',
+                marginLeft: "10px",
+                fontSize: '20px',
+                color: 'grey',
+                alignItems: 'center'}} />
+            </Grid>
+            <Grid item   >
+              <div> Pour modifier, appuyer sur le stylo</div>
+            </Grid>
+          </Grid>
 
 
 
-
-
-//  {/* je declare deux lignes */}
-//  <Grid container direction="row" >
-//  <Grid xs={12} >
-//    <span style={{justifyContent:"center"}}> Les informations au dessus de la carte</span>
-//  </Grid>
-//  <Grid xs={12} sx={{ border: '1px solid black' }}>
-//    {/* dans ma 2eme ligne je declare des colonnes qui feront toute la longueur de mes lignes */}
-//    <Grid container xs={12} direction='column' sx={{ border: '1px solid red ' }}>
-//        <Grid sx={{  border: '1px solid yellow'}}>
-//          <span>une ecriture</span>
-//        </Grid>
-//        <Grid sx={{ }}>
-//          <span>une ecriture</span>
-//        </Grid>
-       
-//    </Grid>
-//  </Grid>
-// </Grid>
-
-
-
-
-
-
-
-
-{/* <TextField
+          <Grid container spacing={2}  sx={{display: 'flex' ,flexDirection:'row', p:1,mt:3}}>
+            <Grid item xs={4}>
+              <TextField
                   id="outlined-required"
                   label="Prénom"
-                  defaultValue="Adrien"
-                /> */}
-
-{/* <TextField
+                  defaultValue="Adrien"/> 
+            </Grid>
+            <Grid item xs={8} >
+            <TextField
                   id="outlined-required"
                   label="Nom de famille"
-                  defaultValue="Crivellaro"
-                /> */}
+                  defaultValue="Crivellaro"/> 
+            </Grid>
+          
+          </Grid>
 
-{/* <TextField
+          <Grid item sx={{p:1}}>
+          <TextField
                   id="outlined-required"
                   label="Addresss"
-                  defaultValue="92, Avenue de Saint-Mandé"
-                />
-                <TextField
+                  defaultValue="92, Avenue de Saint-Mandé"/>
+          </Grid>
+
+          <Grid container spacing={2}  sx={{display: 'flex' ,flexDirection:'row',p:1}}>
+            <Grid item xs={3}> 
+              <TextField
                   id="outlined-required"
                   label="Code postal"
-                  defaultValue="75012"
-                />
-                <TextField
+                  defaultValue="75012"/>
+            </Grid>
+            <Grid item xs={9} >
+              <TextField
                   id="outlined-required"
                   label="Ville"
-                  defaultValue="Paris"
-                />
-                <TextField
+                  defaultValue="Paris"/>
+            </Grid>
+          </Grid>
+
+          <Grid container  spacing={2} sx={{display: 'flex' ,flexDirection:'row', p:1}}>
+            <Grid item xs={7}>
+              <TextField
                   id="outlined-required"
                   label="Email"
-                  defaultValue="acrivel@gmail.com"
-                />
+                  defaultValue="acrivel@gmail.com"/>
+            </Grid>
+            <Grid item xs={5}>
                 <TextField
                   id="outlined-required"
                   label="Téléphone"
-                  defaultValue="02 40 06 54 75"
-                /> */}
+                  defaultValue="02 40 06 54 75"/>
+            </Grid>
+          </Grid>
+        </Grid>
+        
 
 
 
-  //   <>
-  //   <Box sx={{
-  //           height: "100%",
-  //           width: "100%",
-  //           display: "flex",
-  //           flexDirection: "row",
-  //           alignItems: "center",
-  //           backgroundColor: 'white'
-  //         }}>
-  //     {/* <Box sx={{
-  //       height : '100%', 
-  //       width: '50%',
-  //       flexDirection: 'column'
-  //       }}> */}
-  //         <Grid container spacing={2}>
-  //           <span style={{
-  //           fontFamily:'Noto Sans',
-  //           fontSize: '30px',
-  //           fontWeight: 600,
-  //           }}> 
-  //           PARTICULIER BENEFICIAIRE  
-  //           </span>
-  //           <ModeEditOutlineIcon style={{
-  //             border: '1px solid',
-  //             borderRadius: '5px',
-  //             marginLeft: "10px",
-  //             fontSize: '20px',
-  //             color: 'grey'
-  //           }} />
-  //           <br />
-  //           <span style={{
-  //           fontFamily:'Roboto',
-  //           fontSize: '12px',
-  //           }}>
-  //             pour modifier appuyer avec le stylo
-  //           </span>
-  //         </Grid>
-         
-          
-         
-  //     </Box>
-  //     {/* <Box sx={{height : '100%', width: '50%'}} >
-  //      particulier beneficiaire
-  //     </Box> */}
-  //   {/* </Box> */}
-   
-  //   </>
-  
-  // )}
+        <Grid container xs={6} sx={{
+            alignItems: 'center',
+            justifyContent: 'center',
+            border: '2px solid green',
+            height:'100%',
+            width: "100%"}}>
+          <Box sx={{  
+            
+            border: '2px solid red',
+            }}>
+              <div>emplacement de la carte </div>
+          </Box>
+          </Grid>  
+      </Grid> 
+    </Box> 
+    </> 
+  );
+}
 

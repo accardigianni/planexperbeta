@@ -34,6 +34,9 @@ const theme = createTheme({
     },
     // custom textfield form
     MuiTextField:{
+      defaultProps: {
+        fullWidth: true, // Ajout de fullWidth par défaut
+      },
       styleOverrides:{
         root:{
           backgroundColor: '#eeeeee',
