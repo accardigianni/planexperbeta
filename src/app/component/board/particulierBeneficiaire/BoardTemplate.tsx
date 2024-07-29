@@ -8,11 +8,12 @@ export default function BoardBeneficiaryInfo() {
       <Box
         sx={{
           borderRadius: 1,
-          height: '90%',
-          width: '90%',
+          height: '505px',
+          width: '1200px',
           display: 'flex',
           backgroundColor: 'white',
-          flexDirection: 'column'}}>
+          flexDirection: 'column',
+          }}>
         <TabsHeadBand />
       </Box>
     </>

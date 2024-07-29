@@ -6,6 +6,7 @@ import Tab from '@mui/material/Tab';
 import TextFieldCustom from '../textfield/texfield';
 import TextFielHeadBand from '../textfieldHeadBand/textfieldHeadBand';
 import Map from '../map/map';
+import AddressView from '../../addresseTravaux/addressView';
 
 
 
@@ -68,8 +69,13 @@ const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         <Grid container sx={{ flexDirection: 'row', p: 1, height: '100%', width: '100%' }}>
           <Grid container xs={6} sx={{ flexDirection: 'column' }}>
             <CustomTabPanel value={value} index={0}>
-            <TextFielHeadBand/>
-              <TextFieldCustom/>
+                <TextFielHeadBand/>
+                <TextFieldCustom/>
+            </CustomTabPanel>
+            <CustomTabPanel value={value} index={1}>
+              <Grid container sx={{display:'flex', flexDirection:'column'}}>
+                <AddressView/>
+                </Grid>
             </CustomTabPanel>
           </Grid>
 

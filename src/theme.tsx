@@ -3,6 +3,16 @@ import { BorderColor } from '@mui/icons-material';
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
+  // responsive
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 600,
+      md: 900,
+      lg: 1200,
+      xl: 1536,
+    },
+  },
   // palette de couleur par default
   palette: {
     primary: {
@@ -29,20 +39,26 @@ const theme = createTheme({
 
     //   '@media (min-width:600px)'
      },
-     // typo de textCommercial.tsx
+     // typo gras noir Noto font size 26px
      h2:{
       fontSize: '26px',
       fontWeight: 600,
       color : 'rgb(0,0,0)'
     //   '@media (min-width:600px)'
      },
-     // typo entête textfieldHandBand.tsx
+     // typo gras noir Noto avec line height
      h3:{
       fontFamily: 'Noto Sans', 
       fontSize: '32px', 
       lineHeight: '24px',
       fontWeight: '600'
      },
+     h4:{
+      fontFamily: 'Noto sans',
+      fontSize:'20px',
+      fontWeight:'500',
+     },
+     // typo samll pour commentaires
      subtitle1:{
       fontSize: '12px'
      }
