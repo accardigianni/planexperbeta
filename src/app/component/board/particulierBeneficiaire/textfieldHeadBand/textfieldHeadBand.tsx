@@ -1,16 +1,16 @@
-import { Grid } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import React from 'react'
 import ModeEditOutlineIcon from '@mui/icons-material/ModeEditOutline';
 
 export default function TextFielHeadBand() {
   return (
     <>
-    <Grid container sx={{ flexDirection: 'row', alignItems: 'center', pl:1 }}>
+    <Grid container sx={{ flexDirection: 'row', alignItems: 'center',pl:1 }}>
               {/* si on retir le xs l'icon reviens se coller a la string, je ne comprend pas pourquoi ?? */}
               <Grid item xs>
-                <div style={{ fontFamily: 'Noto Sans', fontSize: '26px', fontWeight: '600' }}>
+                <Typography variant='h3'>
                   PARTICULIER BENEFICIAIRE
-                </div>
+                  </Typography>
               </Grid>
               <Grid item sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
                 <ModeEditOutlineIcon
@@ -19,13 +19,14 @@ export default function TextFielHeadBand() {
                     borderRadius: '5px',
                     fontSize: '20px',
                     color: 'grey',
-                  }}
-                />
+                  }}/>
               </Grid>
             </Grid>
 
-            <Grid item sx={{ fontSize: '12px', paddingLeft: '8px' }}>
+            <Grid item sx={{pl:1}} >
+              <Typography variant='subtitle1'>
               <div>Pour modifier, appuyer sur le stylo</div>
+              </Typography>
             </Grid>
     </>
   )
