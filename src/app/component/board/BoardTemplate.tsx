@@ -1,8 +1,8 @@
 import React from 'react';
 import { Box,} from '@mui/material';
-import TabsHeadBand from './tabsHeadBand/tabsHeadBand';
+import TabsHeadBand from './tabsHeadBand';
 
-export default function BoardBeneficiaryInfo() {
+export default function BoardTemplate() {
   return (
     <>
       <Box

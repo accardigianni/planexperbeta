@@ -12,7 +12,7 @@ export default function TextFielHeadBand() {
                   PARTICULIER BENEFICIAIRE
                   </Typography>
               </Grid>
-              <Grid item sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center' }}>
+              <Grid item sx={{ display: 'flex', justifyContent: 'flex-end', alignItems: 'center', pr:1 }}>
                 <ModeEditOutlineIcon
                   style={{
                     border: '1px solid',

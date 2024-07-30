@@ -3,10 +3,10 @@ import React, { useState } from 'react';
 import { Box, Grid } from '@mui/material';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import TextFieldCustom from '../textfield/texfield';
-import TextFielHeadBand from '../textfieldHeadBand/textfieldHeadBand';
-import Map from '../map/map';
-import AddressView from '../../addresseTravaux/addressView';
+import TextFieldCustom from './element/textfield/texfield';
+import TextFielHeadBand from './element/textfieldHeadBand/textfieldHeadBand';
+import Map from './element/map/map';
+import AddressView from './element/addresseTravaux/addressView';
 
 
 
@@ -66,28 +66,63 @@ const handleChange = (event: React.SyntheticEvent, newValue: number) => {
       </Box>
       </Grid>
 
-        <Grid container sx={{ flexDirection: 'row', p: 1, height: '100%', width: '100%' }}>
-          <Grid container xs={6} sx={{ flexDirection: 'column' }}>
             <CustomTabPanel value={value} index={0}>
+            <Grid container sx={{ flexDirection: 'row', p: 1, height: '100%', width: '100%' }}>
+            <Grid item xs={6} sx={{ flexDirection: 'column' }}>
                 <TextFielHeadBand/>
                 <TextFieldCustom/>
-            </CustomTabPanel>
-            <CustomTabPanel value={value} index={1}>
-              <Grid container sx={{display:'flex', flexDirection:'column'}}>
-                <AddressView/>
-                </Grid>
-            </CustomTabPanel>
-          </Grid>
-
-          <Grid container xs={6}
-            sx={{
+            </Grid>
+            <Grid item xs={6} sx={{
               alignItems: 'center',
               justifyContent: 'center',
               height: '100%',
               width: '100%'}}>
-            <Map/>
-          </Grid>
-        </Grid>
+                <Map/>
+            </Grid>
+            </Grid>
+            </CustomTabPanel>
+
+            <CustomTabPanel value={value} index={1}>
+              <Grid container sx={{display:'flex', flexDirection:'row'}}>
+                <Grid item xs={4}>
+                {/* <AddressView/> */}
+                <Map/>
+                </Grid>
+                <Grid item xs={4}>
+                  <Map/>
+                </Grid>
+                <Grid item xs={4}>
+                  <Grid container sx={{display:'flex', flexDirection:'row'}}>
+                    <Grid  item>
+                    <Map/>
+                    </Grid>
+                  </Grid>
+                </Grid>
+                </Grid>
+            </CustomTabPanel>
+
+            <CustomTabPanel value={value} index={2}>
+              <Grid container xs={12} sx={{display:'flex', flexDirection:'row'}}>
+                <Grid item xs={5} sx={{border:'5px solid green'}}>
+                </Grid>
+                <Grid item xs={7} sx={{border:'5px solid purple', display:'flex'}}>
+                </Grid>
+              </Grid>
+            </CustomTabPanel>
+
+            <CustomTabPanel value={value} index={3}>
+            <Grid container sx={{display:'flex', flexDirection:'row', border:'2px solid yellow'}}>
+              ligne 1
+            </Grid>
+            <Grid container sx={{display:'flex', flexDirection:'row', border:'2px solid red'}}>
+              <Grid container xs={6} sx={{display:'flex', flexDirection:'row', border:'2px solid blue'}}>
+                colonne gauche
+              </Grid>
+              <Grid container xs={6} sx={{display:'flex', flexDirection:'row', border:'2px solid black'}}>
+                colonne droite
+              </Grid>
+            </Grid>
+            </CustomTabPanel>
         </>
         
 );
